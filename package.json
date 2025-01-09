@@ -1,0 +1,14 @@
+{
+  "name": "songscraper",
+  "version": "1.0.0",
+  "description": "an app that let u find songs",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "x2loreeh",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.3.1"
+  }
+}
