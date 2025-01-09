@@ -4,9 +4,13 @@ const path = require('path');
 function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
-   mainWindow.loadFile('index.html');
+   mainWindow.loadFile('./src/index.html');
+   mainWindow.webContents.openDevTools();
 }
 
 app.on('ready', createWindow);
