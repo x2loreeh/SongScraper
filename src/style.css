@@ -11,6 +11,7 @@
     padding: 10px;    
     display: flex;
     justify-content: space-between;
+    position: sticky;
 }
 
 .navbar h1 {
@@ -62,11 +63,13 @@
 }
 
 .track-title h3 {
+    color: white;
     margin: 0;
     font-size: 18px;
 }
 
 .track-artist p {
+    color: wheat;
     margin: 5px 0;
     color: #666;
 }
@@ -89,3 +92,22 @@ h3 {
 p {
     margin: 5px 0;
 }
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #454549, #48494b);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3261e2, #0561da);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #051eac, #4749d6);
+}
+  
