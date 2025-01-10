@@ -26,3 +26,33 @@
 .navbar input {
     margin-right: 15px;
 }
+
+
+.track-result {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+.track-title {
+    display: flex;
+    align-items:flex-start;
+    margin-left: 15px;
+}
+.track-artist {
+    margin-left: 15px;
+    display: flex;
+    align-content:baseline;
+}
+.track-link {
+    margin-left: 15px;
+    align-items:last baseline;
+}
+img {
+    border-radius: 15px;
+}
+h3 {
+    margin: 0;
+}
+p {
+    margin: 5px 0;
+}
