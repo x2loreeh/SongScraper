@@ -35,7 +35,9 @@
     background-color: rgb(48, 45, 45);
 }
 
-
+.spacing {
+    margin-bottom: 30px;
+}
 
 .track-result {
     margin-bottom: 20px;
@@ -44,6 +46,11 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.track-result:hover {
+    box-shadow: 0 0 10px #0a06ca, 0 0 20px #0a06ca, 0 0 30px #0a06ca, 0 0 40px #0a06ca;
 }
 
 .track-cover img {
