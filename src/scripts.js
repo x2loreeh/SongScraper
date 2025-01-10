@@ -37,11 +37,18 @@ document.addEventListener('DOMContentLoaded', function () {
         data.data.forEach(track => {
             const trackElement = document.createElement('div');
             trackElement.classList.add('track-result');
+            trackElement.style.display = 'flex';
 
+            const imgDiv = document.createElement('div');
+            imgDiv.classList.add('track-cover');
             const imgElement = document.createElement('img');
             imgElement.src = track.album.cover_medium;
             imgElement.alt = `${track.title} cover`;
-            imgElement.style.width = '125px'; 
+            imgElement.style.width = '125px';
+            imgDiv.appendChild(imgElement);
+            const textDiv = document.createElement('div');
+            textDiv.classList.add('track-text');
+            textDiv.style.marginLeft = '15px';
 
             const titleDiv = document.createElement('div');
             titleDiv.classList.add('track-title');
@@ -55,11 +62,11 @@ document.addEventListener('DOMContentLoaded', function () {
             linkDiv.classList.add('track-link');
             linkDiv.innerHTML = `<a href="${track.link}" target="_blank">Ascolta su Deezer</a>`;
 
-            trackElement.appendChild(imgElement);
-            trackElement.appendChild(titleDiv);
-            trackElement.appendChild(artistDiv);
-            trackElement.appendChild(linkDiv);
-
+            textDiv.appendChild(titleDiv);
+            textDiv.appendChild(artistDiv);
+            textDiv.appendChild(linkDiv);
+            trackElement.appendChild(imgDiv);
+            trackElement.appendChild(textDiv);
             resultsDiv.appendChild(trackElement);
         });
     }

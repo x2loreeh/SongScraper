@@ -3,6 +3,7 @@
 * {
     margin: 0;
     font-family: "Poppins";
+    background-color: rgb(48, 45, 45);;
 }
 
 .navbar {
@@ -13,40 +14,65 @@
 }
 
 .navbar h1 {
+    background-color: black;
     color: white;
     margin-left: 15px;
     display: flex;
     align-items: center;
 }
 .navbar img {
+    background-color: black;
     margin-right: 5px;
 }
 
 
 .navbar input {
+    color: white;
     margin-right: 15px;
 }
 
+.resultati {
+    background-color: rgb(48, 45, 45);
+}
+
+
 
 .track-result {
-    display: flex;
     margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.track-cover img {
+    border-radius: 5px;
+}
+
+.track-text {
     margin-left: 15px;
 }
-.track-title {
-    display: flex;
-    align-items:flex-start;
-    margin-left: 15px;
+
+.track-title h3 {
+    margin: 0;
+    font-size: 18px;
 }
-.track-artist {
-    margin-left: 15px;
-    display: flex;
-    align-content:baseline;
+
+.track-artist p {
+    margin: 5px 0;
+    color: #666;
 }
-.track-link {
-    margin-left: 15px;
-    align-items:last baseline;
+
+.track-link a {
+    color: #1e90ff;
+    text-decoration: none;
 }
+
+.track-link a:hover {
+    text-decoration: underline;
+}
+
 img {
     border-radius: 15px;
 }
