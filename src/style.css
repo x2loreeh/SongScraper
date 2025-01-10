@@ -15,7 +15,13 @@
 .navbar h1 {
     color: white;
     margin-left: 15px;
+    display: flex;
+    align-items: center;
 }
+.navbar img {
+    margin-right: 5px;
+}
+
 
 .navbar input {
     margin-right: 15px;
