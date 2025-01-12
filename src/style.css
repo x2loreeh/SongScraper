@@ -83,6 +83,28 @@
     text-decoration: underline;
 }
 
+.play-button, .pause-button {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: #4787ff;
+    border: none;
+    background: #4787ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.play-button:hover, .pause-button:hover {
+    box-shadow: 0 0 10px #0a06ca, 0 0 20px #0a06ca, 0 0 30px #0a06ca, 0 0 40px #0a06ca;
+}
+
+.play-button i, .pause-button i {
+    background: transparent;
+}
+
 img {
     border-radius: 15px;
 }

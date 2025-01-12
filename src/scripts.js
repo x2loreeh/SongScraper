@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     let audio = null;
     let isPlaying = false;
-
+    let playButton = null;
     document.getElementById('searchButton').addEventListener('click', function() {
         const songTitle = document.getElementById('songInput').value;
         if (songTitle) {
@@ -64,15 +64,26 @@ document.addEventListener('DOMContentLoaded', function () {
             artistDiv.classList.add('track-artist');
             artistDiv.innerHTML = `<p>Artista: ${track.artist.name}</p>`;
 
-            const playButton = document.createElement('button');
+            playButton = document.createElement('button');
             playButton.classList.add('play-button');
-            playButton.innerText = 'Ascolta';
+            playButton.classList.add('circle-button');
+            const icon = document.createElement('i');
+            icon.classList.add('fa');
+            icon.classList.add('fa-play');
+            playButton.appendChild(icon);
+
+            playButton.setAttribute('title', 'Ascolta');
+
             playButton.addEventListener('click', function() {
                 if (isPlaying) {
+                    
                     audio.pause();
-                    playButton.innerText = 'Ascolta';
+                    icon.classList.remove('fa-pause');
+                    icon.classList.add('fa-play');
                     isPlaying = false;
+                    playButton.setAttribute('title', 'Ascolta');
                 } else {
+
                     if (audio === null || audio.src !== track.preview) {
                         audio = new Audio(track.preview);
                         audio.play();
@@ -91,11 +102,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     } else {
                         audio.play();
                     }
-                    playButton.innerText = 'Pausa';
+                    icon.classList.remove('fa-play');
+                    icon.classList.add('fa-pause');
                     isPlaying = true;
+                    playButton.setAttribute('title', 'Pausa');
                 }
             });
 
+            playButton.addEventListener('mouseover', function() {
+                playButton.setAttribute('title', isPlaying ? 'Pausa' : 'Ascolta');
+            });
+            
             const durationDiv = document.createElement('div');
             durationDiv.classList.add('track-duration');
             durationDiv.style.display = 'flex';
@@ -110,8 +127,9 @@ document.addEventListener('DOMContentLoaded', function () {
             progressBar.classList.add('track-progress-bar');
             progressBar.max = 100;
             progressBar.value = 0;
-            progressBar.style.width = '80%';
+            progressBar.style.width = '215px';
 
+            // Etichetta per il minutaggio totale (a destra)
             const totalTimeLabel = document.createElement('span');
             totalTimeLabel.classList.add('total-time');
             totalTimeLabel.innerHTML = formatTime(track.duration);
