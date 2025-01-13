@@ -105,6 +105,10 @@
     background: transparent;
 }
 
+progress .track-progress-bar {
+    border-radius: 17px;
+}
+
 img {
     border-radius: 15px;
 }

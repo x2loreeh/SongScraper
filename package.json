@@ -10,5 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^33.3.1"
+  },
+  "dependencies": {
+    "discord-rich-presence": "^0.0.8",
+    "discord-rpc": "^4.0.1"
   }
 }
