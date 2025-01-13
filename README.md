@@ -18,10 +18,15 @@ If you have issues with running SongSCraper or you just found bugs, feel free to
 
 ## Shortcuts
 ```CTRL + W``` -> Close the application
+
 ```CTRL + R``` -> Reload the application
+
 ```CTRL + I``` -> Open DevTools Console
+
 ```CTRL + M``` -> Open Changelog/Releases Page
+
 ```CTRL + ?``` -> Open this page
+
 !! All these shortcuts are also for macOS and Linux !!
 
 ## Discord
