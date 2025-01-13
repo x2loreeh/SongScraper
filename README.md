@@ -15,3 +15,14 @@ You can simply go to the search bar, type the artist/song/album name and it will
 
 ## And if i have a problem?
 If you have issues with running SongSCraper or you just found bugs, feel free to open an Issue in the "Issues" section of this repository
+
+## Shortcuts
+```CTRL + W``` -> Close the application
+```CTRL + R``` -> Reload the application
+```CTRL + I``` -> Open DevTools Console
+```CTRL + M``` -> Open Changelog/Releases Page
+```CTRL + ?``` -> Open this page
+!! All these shortcuts are also for macOS and Linux !!
+
+## Discord
+You can also show to your friends now that you are using SongScraper with the integrated Discord Rich Presence!
